@@ -1,0 +1,65 @@
+
+.bottom-container .custom-chips .md-chip-remove-container {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+
+} 
+.custom-chips button.cross {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: none;  
+}
+md-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  color: white;
+  fill: white; 
+}
+.custom-chips .md-chip .md-chip-remove-container button.cross:focus {
+  background: rgba(255, 0, 0, 0.8); 
+}
+md-chip-template {
+  padding-right: 5px; 
+}
+
+md-chip{
+  height: 24px!important;
+  line-height: 24px!important;
+}
+
+md-bottom-sheet {
+  padding-left:0;
+  padding-right:0;
+}
+
+md-bottom-sheet .md-toolbar-tools {
+  background-color: white;
+  padding-top: 16px;
+}
+
+md-bottom-sheet .dmd-title {
+  margin-right:20px; 
+  line-height:36px;
+}
+
+md-bottom-sheet .md-toolbar-tools md-input-container label{
+  margin-left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

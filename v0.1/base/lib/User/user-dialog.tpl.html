@@ -1,0 +1,67 @@
+<md-dialog aria-label="Mango (Fruit)" ng-cloak>
+
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2 ng-show="!isRegister">Login</h2>
+                <h2 ng-show="isRegister">Register</h2>
+                <span flex></span>
+
+                <md-button class="md-icon-button" ng-click="cancel()" aria-label="Menu">
+                    <ng-md-icon icon="close" class="ng-md-icon-centered" style="fill:#02679b"></ng-md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-toolbar class="md-warn" ng-show="anonUser.status">
+            <div class="md-toolbar-tools">
+              <h2 class="md-flex">{{anonUser.error_message}}</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content ng-show="!isRegister" layout-wrap layout-margin>
+
+            <md-input-container>
+                <label>User</label>
+                <input ng-model="anonUser.username" type="text" ng-required="!isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="anonUser.pssw" type="password" ng-required="!isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-button ng-click="toggeLoginRegister()" style="margin-left:20px;">
+                Register
+            </md-button>
+            <md-button ng-click="login()" style="margin-right:20px;">
+                Login
+            </md-button>
+
+        </md-dialog-content>
+
+        <md-dialog-content ng-show="isRegister" layout-wrap layout-margin>
+            <md-input-container>
+                <label>User</label>
+                <input ng-model="anonUser.username" type="text" ng-required="isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-input-container ng-show="isRegister">
+                <label>Email</label>
+                <input ng-model="anonUser.email" type="text" ng-required="isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="anonUser.pssw" type="password" ng-required="isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-input-container ng-show="isRegister">
+                <label>Repeat Password</label>
+                <input ng-model="anonUser.pssw" type="password" ng-required="isRegister" ng-maxlength="10" minlength="4" md-no-autogrow>
+            </md-input-container>
+            <md-button ng-click="toggeLoginRegister()" style="margin-left:20px;">
+                Login
+            </md-button>
+            <md-button ng-click="register()" style="margin-right:20px;">
+                Register
+            </md-button>
+        </md-dialog-content>
+
+    </form>
+</md-dialog>

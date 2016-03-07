@@ -1,0 +1,41 @@
+<md-bottom-sheet class="md-list md-has-header">
+
+	<div layout="column" class="bottom-container" layout-padding>
+
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+
+				<md-input-container flex>
+					<input ng-model="search.who" placeholder="Enter search">
+				</md-input-container>
+
+				<md-button class="md-icon-button" aria-label="More">
+					<ng-md-icon icon="search" class="ng-md-icon-centered" style="fill:#02679b"></ng-md-icon>
+				</md-button>
+
+			</div>
+		</md-toolbar>
+
+
+		<span class="md-subhead">Places</span>
+		<md-chips class="custom-chips" ng-model="cities" readonly="readonly" md-on-append="ctrl.newVeg($chip)">
+			<md-chip-template>
+				<span>
+					<strong>{{$chip.name}}</strong>
+				</span>
+			</md-chip-template>
+		</md-chips>
+
+		<span class="md-subhead">Things to do</span>
+		<md-chips class="custom-chips" ng-model="vegObjs" readonly="readonly" md-on-append="ctrl.newVeg($chip)">
+			<md-chip-template>
+				<span>
+					<strong>{{$chip.name}}</strong>
+				</span>
+			</md-chip-template>
+		</md-chips>
+
+
+	</div>
+
+</md-bottom-sheet>

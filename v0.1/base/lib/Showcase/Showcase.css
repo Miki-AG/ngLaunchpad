@@ -1,0 +1,79 @@
+
+.avatar-placeholder{
+    position: absolute;
+	top:0;
+}
+
+.photo-placeholder {
+    position: relative;
+}
+
+.star-shadow {
+ 	-webkit-filter: drop-shadow( 1px 3px 3px #000 );
+	filter: drop-shadow( -5px -5px 5px #000 );
+}
+
+@media (max-width:600px) {
+	.avatar-placeholder{
+    	position: relative;
+	}
+
+	.avatar-placeholder .md-title{
+    	margin-left: 50px;
+	}
+
+	.photo-placeholder {
+	    position: relative;
+		height:200px;
+		overflow:hidden;
+	}
+	.photo-placeholder img {
+		position: absolute;
+		top:-100%;
+		bottom:-100%;
+	    margin: auto;
+	}
+
+	.no-margin {
+		margin: 0;
+	}
+}
+
+.black-gradient{
+	position:absolute;
+	bottom:0;
+	height: 35%;
+    width: 100%;
+
+    /* black (0%) to black (65%)*/
+	background: rgba(0,0,0,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.65)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+.avatar-placeholder img {
+	margin-top:auto!important;
+	margin-bottom:auto!important;
+}
+
+
+.showcase-subheaders .md-subheader{
+	margin-right: 0;
+	background-color: rgba(228, 208, 150, 1)!important;
+}
+
+.md-subheader-wrapper .md-subheader-inner:first-child{
+	position: fixed;
+	width:100%;
+	background-color: rgba(228, 208, 150, 1)!important;
+}
+
+
+
+
+

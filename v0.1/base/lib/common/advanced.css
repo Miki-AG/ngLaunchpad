@@ -1,0 +1,84 @@
+.logo-container {
+    min-width: 0;
+}
+.logo {
+    pointer-events: none;
+    vertical-align: middle;
+    height:48px;
+}
+
+.icon-fix {
+    position: relative;
+    top: 7px;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+
+.md-sidenav-backdrop {
+  position: fixed;
+}
+
+.md-sidenav-left{
+  position: fixed;
+}
+
+.md-round-avatar-40{
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.md-round-avatar-106{
+    width: 106px;
+    height: 106px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.image-and-light-yellow-bg {
+    background-image: url(/img/profile-bg.png);
+    background-size: cover;
+}
+
+.transparent-bg {
+   background-color: rgba(230, 194, 54, 0)!important;
+}
+
+.no-padding {
+    padding:0!important;
+}
+
+md-sidenav{
+    background-color: rgba(227, 215, 198, 1)!important;
+}
+
+
+code {
+    color: #106CC8;
+    margin-left: 1px;
+    margin-right: 1px;
+    -webkit-font-smoothing: auto;
+    padding: 0.125em 0.35em;
+    border-radius: 2px;
+
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.065);
+}
+
+p, li {
+    line-height: 1.6em;
+}
+
+
+
+
+
+

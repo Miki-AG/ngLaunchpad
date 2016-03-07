@@ -1,0 +1,96 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
+
+  <md-toolbar layout="row">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="close('left')" aria-label="Menu">
+        <ng-md-icon icon="menu" class="ng-md-icon-centered"></ng-md-icon>
+      </md-button>
+
+      <md-button aria-label="Logo" class="logo-container">
+        <img class="logo" src="/img/ngLaunchpad_compact_logo.png"></md-icon>
+      </md-button>
+
+      <h2>
+        <span>ngLaunchpad</span>
+      </h2>
+
+    </div>
+  </md-toolbar>
+
+  <md-list class="no-padding">
+    <div ng-show="!loggedIn" class="image-and-light-yellow-bg">
+      <md-content layout="column" layout-align="center center" class="transparent-bg">
+        <ng-md-icon size="128px" icon="account_circle" style="fill:gray"></ng-md-icon>
+      </md-content>
+
+      <div layout="row" layout-align="center center" ng-show="!loggedIn">Not logged in ({{loggedIn}})</div>
+      <md-list-item layout="row" layout-align="center center" class="md-padding">
+        <md-button class="md-primary md-raised" aria-label="login" ng-click="showLoginPopup($event)">
+          Login
+        </md-button>
+        <div flex></div>
+        <md-button class="md-primary md-raised" aria-label="register" ng-click="showRegisterPopup($event)">
+          Register
+        </md-button>
+      </md-list-item>
+    </div>
+
+    <div ng-show="loggedIn" class="image-and-light-yellow-bg">
+      <md-content layout="column" layout-align="center center" class="transparent-bg">
+        <img ng-src="/miargar.jpg" class="md-round-avatar-106" />
+      </md-content>
+
+      <md-list-item ng-click="toggleAccountMenu($event)">
+        <p>{{currentUser.username}}</p>
+        <md-button aria-label="open" class="md-icon-button ng-md-icon-centered" ng-show="accountMenuOpen">
+          <ng-md-icon icon="keyboard_arrow_up"></ng-md-icon>
+        </md-button>
+        <md-button aria-label="close" class="md-icon-button ng-md-icon-centered" ng-show="!accountMenuOpen">
+          <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
+        </md-button>
+      </md-list-item>
+    </div>
+  </md-list>
+
+  <md-list ng-show="accountMenuOpen && loggedIn" class="light-yellow-bg">
+    <!--md-subheader class="md-no-sticky">Account</md-subheader-->
+    <div ng-repeat="item in accountItems">
+      <md-list-item ng-click="doActionMenu($event, item.id, item.action)">
+        <p>{{item.title}}</p>
+      </md-list-item>
+    </div>
+  </md-list>
+
+  <md-divider></md-divider>
+
+  <md-list class="light-yellow-bg no-padding">
+    <!--md-subheader class="md-no-sticky">Checkbox with Secondary Action</md-subheader-->
+    <div ng-repeat="menu in visibleMenus">
+      <md-list-item ng-click="doActionMenu($event, menu.id, menu.action)" class="yellow-bg">
+
+        <ng-md-icon class="ng-md-icon-centered md-padding icon-fix" icon="{{menu.icon}}"  style="fill: {{menu.icon_color}}"></ng-md-icon>
+
+        <p>{{menu.title}}</p>
+
+        <div ng-show="menu.submenus">
+          <md-button aria-label="open" class="md-icon-button ng-md-icon-centered icon-fix" ng-show="menu.menuOpen">
+            <ng-md-icon icon="keyboard_arrow_up"></ng-md-icon>
+          </md-button>
+          <md-button aria-label="close" class="md-icon-button ng-md-icon-centered icon-fix" ng-show="!menu.menuOpen">
+            <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
+          </md-button>
+        </div>
+      </md-list-item>
+
+      <div ng-show="menu.menuOpen" ng-repeat="submenu in menu.submenus">
+        <md-list-item ng-href="#/layout/container" ng-click="doActionSubmenu($event, submenu.id)" class="submenu">
+          <p>{{submenu.title}}</p>
+        </md-list-item>
+      </div>
+    </div>
+  </md-list>
+
+
+
+
+</md-sidenav>
