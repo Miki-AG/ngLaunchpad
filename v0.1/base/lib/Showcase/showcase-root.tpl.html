@@ -1,14 +1,24 @@
-<div nglaunch-topbar></div>
-<div nglaunch-sidebar></div>
+<div flex layout="column" layout-fill ng-cloak="">
+  <section layout="row" flex="">
 
-<md-content md-scroll-y="" layout="column" flex="" class="layout-column flex">
-	<div ng-view="" layout-padding="" flex="noshrink" class="layout-padding ng-scope flex-noshrink">
-		<div class="doc-content ng-scope">
-		  <md-content>
+	<div nglaunch-sidebar></div>
 
-			<div ui-view></div>
+    <md-content flex="" >
 
-		  </md-content>
+		<div nglaunch-topbar></div>
+
+		<div layout="column" layout-padding="" layout-fill="" layout-align="top left">
+			<div ui-view layout="column" layout-fill></div>
+			<div>
+				<md-button ng-click="toggleSidenav('right')" ng-hide="isOpenLeft()" class="md-primary" hide-gt-md>
+				Toggle right
+				</md-button>
+			</div>
 		</div>
-	</div>
-</md-content>
+
+		<div flex=""></div>
+
+    </md-content>
+
+  </section>
+</div>

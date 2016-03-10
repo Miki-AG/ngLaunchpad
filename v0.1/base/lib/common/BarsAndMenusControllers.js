@@ -5,6 +5,9 @@ angular.module('ngMApp')
     	$scope.alert = '';
 
 
+      $scope.isOpenLeft = function(){
+        return $mdSidenav('left-sidenav').isOpen();
+      };
 
     	$scope.showListBottomSheet = function($event) {
     	  $scope.alert = '';
@@ -58,31 +61,28 @@ angular.module('ngMApp')
       $scope.publicMenus = [{
         id: 0,
         title: "Installation",
-        icon: "person",
         menuOpen: false,
         action: '/installation'
       }, {
         id: 1,
         title: "Getting started",
-        icon: "directions_bus",
         menuOpen: false,
         action: '/gettingstarted'
       }, {
         id: 2,
         title: "Themes",
-        icon: "account_balance",
         menuOpen: false,
         action: '/themes'
       }, {
         id: 3,
-        title: "Resources",
-        icon: "book",
-        menuOpen: false
+        title: "Layout types",
+        menuOpen: false,
+        action: '/layouts'
       }, {
         id: 4,
-        title: "Github",
-        icon: "people",
-        menuOpen: false
+        title: "About",
+        menuOpen: false,
+        action: '/about'
       }];
 
 
@@ -93,7 +93,7 @@ angular.module('ngMApp')
         console.log(action);
 
         if (action) {
-          $mdSidenav('left').toggle();
+          $mdSidenav('left-sidenav').toggle();
             $location.path(action);
         }
         else {
