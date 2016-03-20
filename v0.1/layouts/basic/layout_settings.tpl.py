@@ -14,8 +14,6 @@ def load_base_configuration():
         'deploy_static': 'yes',
         'deploy_gae': 'yes',
 
-        'STATIC_URL': './STATIC/',
-
         'ANGULAR_VERSION': '1.4.8',
         'ANGULAR_MATERIAL_VERSION': '1.0.0',
         'ANGULAR_MATERIAL_ICONS_VERSION': '0.5.0',

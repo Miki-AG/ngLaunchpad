@@ -6,7 +6,7 @@ from fabric.contrib.files import exists
 from fabric.contrib import *
 from django.template import Template
 import os
-import project_settings
+import layout_settings
 
 
 #set_operating_system()
@@ -36,7 +36,8 @@ def css():
 
 def createhtml():
     print "rendering..."
-    local_template_render('./templates/index.tpl.html', './index.html', project_settings.load_base_configuration())
+    import layout_settings
+    local_template_render('./templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
 
 
 def startserverlocal():

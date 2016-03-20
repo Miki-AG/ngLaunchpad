@@ -63,8 +63,8 @@ def create_properties(ngm_version, site_type, project_path, project_name):
     project_path: path
     project_name: project_name
     """
-    source_file = './%s/base/project_settings.tpl.py'%(ngm_version)
-    dest_file = '%s/%s/project_settings.py'%(project_path, project_name)
+    source_file = '%s/%s/layout_settings.tpl.py'%(project_path, project_name)
+    dest_file = '%s/%s/layout_settings.py'%(project_path, project_name)
 
     params = {
         'open_braket': '{',
