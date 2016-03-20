@@ -6,33 +6,33 @@ angular.module('ngMApp', [
         cfpLoadingBarProvider.includeSpinner = false;
 
         $stateProvider
-            .state('showcase', {
+            .state('pages', {
                 abstract: true,
-                templateUrl: '/ng/lib/Showcase/showcase-root.tpl.html'
+                templateUrl: '/ng/pages/pages-root.tpl.html'
             })
-            .state('showcase.page0', {
+            .state('pages.page0', {
                 url: '/',
-                templateUrl: '/ng/lib/Showcase/page0.tpl.html',
+                templateUrl: '/ng/pages/page0.tpl.html',
                 controller: 'Page0Controller'
             })
-            .state('showcase.page1', {
+            .state('pages.page1', {
                 url: '/installation',
-                templateUrl: '/ng/lib/Showcase/page1.tpl.html',
+                templateUrl: '/ng/pages/page1.tpl.html',
                 controller: 'Page1Controller'
             })
-            .state('showcase.page2', {
+            .state('pages.page2', {
                 url: '/gettingstarted',
-                templateUrl: '/ng/lib/Showcase/page2.tpl.html',
+                templateUrl: '/ng/pages/page2.tpl.html',
                 controller: 'Page2Controller'
             })
-            .state('showcase.page3', {
+            .state('pages.page3', {
                 url: '/themes',
-                templateUrl: '/ng/lib/Showcase/page3.tpl.html',
+                templateUrl: '/ng/pages/page3.tpl.html',
                 controller: 'Page3Controller'
             })
-            .state('showcase.page_data_example', {
+            .state('pages.page_data_example', {
                 url: '/my_data',
-                templateUrl: '/ng/lib/Showcase/page3.tpl.html',
+                templateUrl: '/ng/pages/page3.tpl.html',
                 controller: 'Page3Controller',
                 resolve:{
                     'ServiceData':function(Service){
