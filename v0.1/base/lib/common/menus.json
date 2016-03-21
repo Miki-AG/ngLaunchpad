@@ -1,0 +1,26 @@
+[{
+    "id": 0,
+    "title": "Installation",
+    "menuOpen": "false",
+    "action": "/installation"
+}, {
+    "id": 1,
+    "title": "Getting started",
+    "menuOpen": "false",
+    "action": "/gettingstarted"
+}, {
+    "id": 2,
+    "title": "Themes",
+    "menuOpen": "false",
+    "action": "/themes"
+}, {
+    "id": 3,
+    "title": "Layout types",
+    "menuOpen": "false",
+    "action": "/layouts"
+}, {
+    "id": 4,
+    "title": "About",
+    "menuOpen": "false",
+    "action": "/about"
+}]

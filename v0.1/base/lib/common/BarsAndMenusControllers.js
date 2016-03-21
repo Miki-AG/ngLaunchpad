@@ -1,6 +1,6 @@
 angular.module('ngMApp')
-  .controller('TopbarSidebarController', ['$scope', '$mdSidenav', '$mdBottomSheet','$location', '$mdDialog',
-  	function($scope, $mdSidenav, $mdBottomSheet, $location, $mdDialog) {
+  .controller('TopbarSidebarController', ['$scope', '$mdSidenav', '$mdBottomSheet','$location', '$mdDialog', '$http',
+  	function($scope, $mdSidenav, $mdBottomSheet, $location, $mdDialog, $http) {
 
     	$scope.alert = '';
 
@@ -58,35 +58,9 @@ angular.module('ngMApp')
         action: "LOGOFF"
       }];
 
-      $scope.publicMenus = [{
-        id: 0,
-        title: "Installation",
-        menuOpen: false,
-        action: '/installation'
-      }, {
-        id: 1,
-        title: "Getting started",
-        menuOpen: false,
-        action: '/gettingstarted'
-      }, {
-        id: 2,
-        title: "Themes",
-        menuOpen: false,
-        action: '/themes'
-      }, {
-        id: 3,
-        title: "Layout types",
-        menuOpen: false,
-        action: '/layouts'
-      }, {
-        id: 4,
-        title: "About",
-        menuOpen: false,
-        action: '/about'
-      }];
-
-
-      $scope.visibleMenus = $scope.publicMenus;
+      $http.get('/ng/lib/SideBar/data.json').success(function (data){
+          $scope.visibleMenus = data;
+      });
 
       $scope.doActionMenu = function(event, idOfMenuToToggle, action) {
         console.log(idOfMenuToToggle);
