@@ -1,16 +1,21 @@
 <md-toolbar>
   <div class="md-toolbar-tools">
 
-    <md-button hide-gt-md class="md-icon-button" ng-click="toggleSidenav('left-sidenav')" aria-label="Menu">
+    <md-button ng-show="sidebarActive" hide-gt-md class="md-icon-button" ng-click="toggleSidenav('left-sidenav')" aria-label="Menu">
+        <ng-md-icon icon="menu" class="ng-md-icon-centered md-accent"></ng-md-icon>
+    </md-button>
+
+    <md-button ng-show="!sidebarActive" class="md-icon-button" ng-click="toggleSidenav('left-sidenav')" aria-label="Menu">
         <ng-md-icon icon="menu" class="ng-md-icon-centered md-accent"></ng-md-icon>
     </md-button>
 
     <md-button aria-label="Logo" class="logo-container">
-      <img class="logo" src="/img/ngLaunchpad_compact_logo.png"></md-icon>
+      <img class="logo" src="/img/topbar_logo.png"></md-icon>
     </md-button>
 
+
     <h2>
-      <span>ngLaunchpad</span>
+      <span>{{companyName}}</span>
     </h2>
     <span flex=""></span>
 
