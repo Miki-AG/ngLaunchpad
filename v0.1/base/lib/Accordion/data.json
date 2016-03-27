@@ -1,0 +1,21 @@
+[{
+  "name": "installation",
+  "subChoices": [{
+    "name": "subchoice 1"
+  }, {
+    "name": "subchoice 2"
+  }]
+}, {
+  "name": "getting started"
+}, {
+  "name": "themes",
+  "subChoices": [{
+    "name": "subchoice 3"
+  }, {
+    "name": "subchoice 4"
+  }]
+}, {
+  "name": "layout types"
+}, {
+  "name": "about"
+}]

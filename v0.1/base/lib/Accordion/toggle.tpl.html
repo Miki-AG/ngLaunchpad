@@ -1,0 +1,33 @@
+<md-button class="md-button-toggle"
+    ng-class="{'active' : isSelected()}"
+    ng-click="toggle()"
+    aria-controls="accordion-{{choice.name}}"
+    aria-expanded="{{isOpen()}}">
+  <div flex layout="row">
+    <span flex="" >{{choice.name}}</span>
+    <span aria-hidden="true"
+        ng-show="choice.subChoices"
+        class="md-toggle-icon"
+        ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow"
+          class="ng-isolate-scope" aria-hidden="true">
+        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%"
+            preserveAspectRatio="xMidYMid meet" focusable="false">
+          <path
+              d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+          <path d="M0 0h48v48h-48z" fill="none"></path>
+        </svg>
+      </md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden">
+    Toggle {{isOpen()? "expanded" : "collapsed"}}
+  </span>
+</md-button>
+
+<ul ng-show="isOpen()" id="docs-menu-{{choice.name}}" class="menu-toggle-list">
+  <li ng-repeat="subchoice in choice.subChoices">
+    <menu-link subchoice="subchoice"></menu-link>
+  </li>
+</ul>
