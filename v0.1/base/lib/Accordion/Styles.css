@@ -47,7 +47,7 @@
     background-color: #f6f6f6;
 }
 .menu-toggle-list {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     max-height: 1300px;
     overflow: hidden;
     position: relative;
