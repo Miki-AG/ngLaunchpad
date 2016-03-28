@@ -16,7 +16,7 @@ def startproject(project_name, project_path, site_type="basic", ngm_version="v0.
     """
     Usage:
     fab
-    project_name: project_name of the projectc.
+    project_name: project_name of the project.
     path: path to the project.
     """
     local("rm -rf %s/%s" % (project_path, project_name))
