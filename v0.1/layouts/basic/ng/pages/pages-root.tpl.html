@@ -1,27 +1,19 @@
 <div flex layout="column" layout-fill ng-cloak="">
-	<section layout="row" flex="">
-
-		<nglaunch-sidebar sidebar-active="true"></nglaunch-sidebar>
-
-		<md-content flex="" >
-
-			<nglaunch-topbar
-				sidebar-active="true"
-				company-name="ngLauncher">
-			</nglaunch-topbar >
-
-			<div layout="column" layout-padding="" layout-fill="" layout-align="top left">
-				<div ui-view></div>
-				<div>
-					<md-button ng-click="toggleSidenav('right')" ng-hide="isOpenLeft()" class="md-primary" hide-gt-md>
-					Toggle right
-					</md-button>
-				</div>
-			</div>
-
-			<div flex=""></div>
-
-		</md-content>
-
-	</section>
+  <section layout="row" flex="">
+    <nglaunch-sidebar sidebar-active="true"></nglaunch-sidebar>
+    <md-content flex="">
+      <nglaunch-topbar sidebar-active="true" company-name="ngLauncher">
+      </nglaunch-topbar>
+      <div layout="column" layout-padding="" layout-fill="" layout-align="top left">
+        <div ui-view></div>
+        <div>
+          <md-button ng-click="toggleSidenav('right')" ng-hide="isOpenLeft()" class="md-primary"
+            hide-gt-md>
+            Toggle right
+          </md-button>
+        </div>
+      </div>
+      <div flex=""></div>
+    </md-content>
+  </section>
 </div>

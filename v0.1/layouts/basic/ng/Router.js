@@ -13,37 +13,37 @@ angular.module('ngMApp', [
       })
       .state('pages.installation', {
         url: '/',
-        templateUrl: '/ng/pages/page0.tpl.html',
+        templateUrl: '/ng/pages/installation.tpl.html',
         controller: 'Page0Controller'
       })
       .state('pages.starting', {
         url: '/gettingstarted',
-        templateUrl: '/ng/pages/page1.tpl.html',
+        templateUrl: '/ng/pages/gettingstarted.tpl.html',
         controller: 'Page1Controller'
       })
       .state('pages.basic', {
         url: '/layouts/basic',
-        templateUrl: '/ng/pages/page2.tpl.html',
+        templateUrl: '/ng/pages/layouts.basic.tpl.html',
         controller: 'Page2Controller'
       })
       .state('pages.grid', {
         url: '/layouts/grid',
-        templateUrl: '/ng/pages/page3.tpl.html',
+        templateUrl: '/ng/pages/layouts.grid.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.predefined', {
         url: '/themes/predefined',
-        templateUrl: '/ng/pages/page3.tpl.html',
+        templateUrl: '/ng/pages/themes.predefined.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.custom', {
         url: '/themes/custom',
-        templateUrl: '/ng/pages/page3.tpl.html',
+        templateUrl: '/ng/pages/themes.custom.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.about', {
         url: '/about',
-        templateUrl: '/ng/pages/page3.tpl.html',
+        templateUrl: '/ng/pages/about.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.page_data_example', {
