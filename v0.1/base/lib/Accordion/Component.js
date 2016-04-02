@@ -1,16 +1,15 @@
 angular.module('ngMApp')
   .directive('accordion', function() {
     return {
-      template:
-        '<ul class="accordion" ng-controller="AccordionCtrl">' +
-          '<li ng-repeat="choice in menuChoice" class="parent-list-item">' +
-            '<menu-toggle choice="choice"></menu-toggle>' +
-          '</li>' +
+      template: '<ul class="accordion" ng-controller="AccordionCtrl">' +
+        '<li ng-repeat="choice in menuChoice" class="parent-list-item">' +
+        '<menu-toggle choice="choice"></menu-toggle>' +
+        '</li>' +
         '</ul>'
     };
   })
   .controller('AccordionCtrl', function($scope, $http) {
-    $http.get('/ng/lib/Accordion/data.json').success(function (data){
+    $http.get('/ng/lib/Accordion/data.json').success(function(data) {
       $scope.menuChoice = data;
     });
   })
