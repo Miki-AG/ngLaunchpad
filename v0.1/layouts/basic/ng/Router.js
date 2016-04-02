@@ -48,7 +48,7 @@ angular.module('ngMApp', [
       })
       .state('pages.page_data_example', {
         url: '/my_data',
-        templateUrl: '/ng/pages/page3.tpl.html',
+        templateUrl: '/ng/pages/about.tpl.html',
         controller: 'Page3Controller',
         resolve: {
           'ServiceData': function(Service) {
@@ -64,12 +64,14 @@ angular.module('ngMApp', [
   .run(function($rootScope, $state) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+      // TODO: implement the code to access here
       //var requireLogin = toState.data.requireLogin;
-      console.log(toState);
+      //console.log(toState);
 
+      /*
       if (toState.name != 'pages.page3') {
         $state.go('pages.page3');
-      }
+      }*/
 
     });
 
