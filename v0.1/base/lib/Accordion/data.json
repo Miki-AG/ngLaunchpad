@@ -1,21 +1,28 @@
 [{
   "name": "installation",
-  "subChoices": [{
-    "name": "subchoice 1"
-  }, {
-    "name": "subchoice 2"
-  }]
+  "state": "pages.installation"
 }, {
-  "name": "getting started"
+  "name": "getting started",
+  "state": "pages.starting"
+}, {
+  "name": "layout types",
+  "subChoices": [{
+    "name": "basic",
+    "state": "pages.basic"
+  }, {
+    "name": "grid",
+    "state": "pages.grid"
+  }]
 }, {
   "name": "themes",
   "subChoices": [{
-    "name": "subchoice 3"
+    "name": "predefined themes",
+    "state": "pages.predefined"
   }, {
-    "name": "subchoice 4"
+    "name": "custom",
+    "state": "pages.custom"
   }]
 }, {
-  "name": "layout types"
-}, {
-  "name": "about"
+  "name": "about",
+  "state": "pages.about"
 }]

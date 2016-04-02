@@ -4,33 +4,8 @@
         <h1 class="md-toolbar-tools">Sidenav left</h1>
     </md-toolbar>
     <div layout="row">
-        <md-content flex class="md-hue-1">
+        <md-content flex class="md-hue-1" style="min-height:1000px">
             <accordion></accordion>
         </md-content>
     </div>
-    <md-content layout-padding="" class="md-hue-1" flex style="min-height:1000px">
-        <md-list class="light-yellow-bg no-padding">
-            <div ng-repeat="menu in visibleMenus">
-                <md-list-item ng-click="doActionMenu($event, menu.id, menu.action)" class="yellow-bg">
-                    <p>{{menu.title}}</p>
-                    <div ng-show="menu.submenus">
-                        <md-button aria-label="open" class="md-icon-button ng-md-icon-centered icon-fix"
-                            ng-show="menu.menuOpen">
-                            <ng-md-icon icon="keyboard_arrow_up"></ng-md-icon>
-                        </md-button>
-                        <md-button aria-label="close" class="md-icon-button ng-md-icon-centered icon-fix"
-                            ng-show="!menu.menuOpen">
-                            <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
-                        </md-button>
-                    </div>
-                </md-list-item>
-                <div ng-show="menu.menuOpen" ng-repeat="submenu in menu.submenus">
-                    <md-list-item ng-href="#/layout/container" ng-click="doActionSubmenu($event, submenu.id)"
-                        class="submenu">
-                        <p>{{submenu.title}}</p>
-                    </md-list-item>
-                </div>
-            </div>
-        </md-list>
-    </md-content>
 </md-sidenav>

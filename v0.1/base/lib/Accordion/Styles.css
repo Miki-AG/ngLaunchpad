@@ -38,7 +38,8 @@
 }
 
 .accordion .md-button.active {
-  color: #03a9f4;
+  /*color: #03a9f4;*/
+  color: rgba(211, 87, 23, 1);
 }
 
 .menu-heading {

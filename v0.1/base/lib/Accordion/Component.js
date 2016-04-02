@@ -13,7 +13,7 @@ angular.module('ngMApp')
       $scope.menuChoice = data;
     });
   })
-  .directive('menuToggle', function() {
+  .directive('menuToggle', function($state, $mdSidenav) {
     return {
       restrict: 'E',
       scope: {
@@ -45,9 +45,9 @@ angular.module('ngMApp')
               controller.openChoice = null;
             } else {
               controller.openChoice = this.choice;
-              console.log(controller.openChoice.name);
             }
           } else {
+            $scope.choiceOrSubchoiceSelected(this.choice.state);
             controller.selectedChoice = this.choice;
             controller.openChoice = null;
             controller.selectedSubchoice = null;
@@ -59,6 +59,12 @@ angular.module('ngMApp')
           var heading = parentNode.querySelector('h2');
           $element[0].firstChild.setAttribute('aria-describedby', heading.id);
         }
+
+        $scope.choiceOrSubchoiceSelected = function(state) {
+          console.log(state);
+          //$mdSidenav('left-sidenav').toggle();
+          $state.go(state);
+        };
       }
     };
   })
@@ -86,10 +92,7 @@ angular.module('ngMApp')
             controller.selectedSubchoice = this.subchoice;
             controller.selectedChoice = null;
           }
-          console.log(controller.selectedSubchoice.name);
-          //controller.setTemplate(controller.selectedSubchoice);
-          // set flag to be used later when
-          // $locationChangeSuccess calls openPage()
+          $scope.$parent.choiceOrSubchoiceSelected(this.subchoice.state);
           controller.autoFocusContent = true;
         };
       }
