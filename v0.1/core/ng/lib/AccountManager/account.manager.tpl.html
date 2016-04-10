@@ -1,0 +1,11 @@
+<div layout="column" class="pattern-bg">
+	<div layout="column" layout-align="center center">
+        <ng-md-icon size="128px" icon="account_circle" style="fill:gray"></ng-md-icon>
+    </div>
+
+	<ul class="account-manager" ng-controller="AccountManagerCtrl">
+		<li ng-repeat="choice in menuChoice" class="parent-list-item">
+			<menu-toggle choice="choice"></menu-toggle>
+		</li>
+	</ul>
+</div>

@@ -37,7 +37,7 @@ def css():
 def createhtml():
     print "rendering..."
     import layout_settings
-    local_template_render('./templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
+    local_template_render('./ng/app/templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
 
 
 def startserverlocal():

@@ -9,46 +9,46 @@ angular.module('ngMApp', [
     $stateProvider
       .state('pages', {
         abstract: true,
-        templateUrl: '/ng/pages/pages-root.tpl.html'
+        templateUrl: '/ng/app/pages/pages-root.tpl.html'
       })
       .state('pages.installation', {
         url: '/',
-        templateUrl: '/ng/pages/installation.tpl.html',
+        templateUrl: '/ng/app/pages/installation.tpl.html',
         controller: 'Page0Controller'
       })
       .state('pages.starting', {
         url: '/gettingstarted',
-        templateUrl: '/ng/pages/gettingstarted.tpl.html',
+        templateUrl: '/ng/app/pages/gettingstarted.tpl.html',
         controller: 'Page1Controller'
       })
       .state('pages.basic', {
         url: '/layouts/basic',
-        templateUrl: '/ng/pages/layouts.basic.tpl.html',
+        templateUrl: '/ng/app/pages/layouts.basic.tpl.html',
         controller: 'Page2Controller'
       })
       .state('pages.grid', {
         url: '/layouts/grid',
-        templateUrl: '/ng/pages/layouts.grid.tpl.html',
+        templateUrl: '/ng/app/pages/layouts.grid.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.predefined', {
         url: '/themes/predefined',
-        templateUrl: '/ng/pages/themes.predefined.tpl.html',
+        templateUrl: '/ng/app/pages/themes.predefined.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.custom', {
         url: '/themes/custom',
-        templateUrl: '/ng/pages/themes.custom.tpl.html',
+        templateUrl: '/ng/app/pages/themes.custom.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.about', {
         url: '/about',
-        templateUrl: '/ng/pages/about.tpl.html',
+        templateUrl: '/ng/app/pages/about.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.page_data_example', {
         url: '/my_data',
-        templateUrl: '/ng/pages/about.tpl.html',
+        templateUrl: '/ng/app/pages/about.tpl.html',
         controller: 'Page3Controller',
         resolve: {
           'ServiceData': function(Service) {

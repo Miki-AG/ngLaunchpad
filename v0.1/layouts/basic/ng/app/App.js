@@ -1,4 +1,4 @@
-angular.module('ngMApp')
+angular.module('ngMApp', [])
 	.controller("AppController", function($scope) {
 
 		/*

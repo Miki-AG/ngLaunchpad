@@ -1,0 +1,10 @@
+[{
+  "name": "Account",
+  "subChoices": [{
+    "name": "A",
+    "state": "pages.predefined"
+  }, {
+    "name": "B",
+    "state": "pages.custom"
+  }]
+}]
