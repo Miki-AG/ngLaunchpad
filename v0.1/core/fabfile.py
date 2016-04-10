@@ -34,6 +34,7 @@ def jscomp():
 def css():
     local("java -jar ~/bin/closure-compiler/closure-stylesheets-20111230.jar local.css -o local.min.css")
 
+
 def build():
     print "rendering..."
 
@@ -42,7 +43,8 @@ def build():
 
     local("cp -a ./base/. ./build")
     local("cp -a ./dev/. ./build")
-    local_template_render('./base/ng/app/templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
+    local_template_render('./base/ng/app/templates/index.tpl.html',
+        './index.html', layout_settings.load_base_configuration())
 
 
 def startserverlocal():
@@ -50,6 +52,7 @@ def startserverlocal():
     local("python -m SimpleHTTPServer 4000 > temp.log &")
     local("open -a '/Applications/Google Chrome.app' http://localhost:4000/#/")
     print "\nstarting server in http://localhost:4000/"
+
 
 def startserverlocalcomp():
     local("rm -rf %s/%s" % ('.', 'temp'))
@@ -80,8 +83,8 @@ def stopserver():
 def static():
     css()
     jscomp()
-    stopServer()
-    startServer()
+    stopserver()
+    startserverlocal()
 
 
 def local_template_render(source_file, dest_file, params):

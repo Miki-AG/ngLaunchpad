@@ -1,10 +1,7 @@
-import sys
 
-from fabric.api import *
-from fabric.colors import green, red, green, yellow
-from fabric.contrib.files import exists
-from fabric.contrib import *
 import os
+from fabric.api import local
+
 
 
 """
