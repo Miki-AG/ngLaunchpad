@@ -26,6 +26,21 @@ def startproject(project_name, project_path, site_type="basic", ngm_version="v0.
 
     clone_files(ngm_version, site_type, project_path, project_name)
     create_properties(ngm_version, site_type, project_path, project_name)
+    local("mkdir %s/%s/dev" % (project_path, project_name))
+
+
+def updateproject(project_name, project_path, site_type="basic", ngm_version="v0.1"):
+    """
+    Usage:
+    fab
+    project_name: project_name of the project.
+    path: path to the project.
+    """
+    local("rm -rf %s/%s/base" % (project_path, project_name))
+    local("mkdir %s/%s/base" % (project_path, project_name))
+    local("mkdir %s/%s/base/ng" % (project_path, project_name))
+    clone_files(ngm_version, site_type, project_path, project_name)
+    create_properties(ngm_version, site_type, project_path, project_name)
 
 
 def clone_files(ngm_version, site_type, project_path, project_name):
@@ -55,7 +70,6 @@ def clone_files(ngm_version, site_type, project_path, project_name):
     local("cp -a ./%s/layouts/%s/. %s/%s/base" %
           (ngm_version, site_type, project_path, project_name))
 
-    local("mkdir %s/%s/dev" % (project_path, project_name))
 
 
 def create_properties(ngm_version, site_type, project_path, project_name):
