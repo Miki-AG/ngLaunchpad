@@ -58,7 +58,7 @@ angular.module('ngMApp')
         action: "LOGOFF"
       }];
 
-      $http.get('/ng/lib/SideBar/data.json').success(function (data){
+      $http.get('/build/ng/lib/SideBar/data.json').success(function (data){
           $scope.visibleMenus = data;
       });
 
@@ -101,7 +101,7 @@ angular.module('ngMApp')
 
         $mdDialog.show({
           controller: 'LoginDialogController',
-          templateUrl: '/static/ng/User/user-dialog.tpl.html',
+          templateUrl: '/build/ng/User/user-dialog.tpl.html',
           parent: angular.element(document.body),
           targetEvent: ev,
           clickOutsideToClose:true

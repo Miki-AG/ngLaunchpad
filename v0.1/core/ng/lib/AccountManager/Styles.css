@@ -107,7 +107,7 @@
 }
 
 .pattern-bg {
-  background-image: url(/ng/lib/AccountManager/pattern-1.png);
+  background-image: url(/build/ng/lib/AccountManager/pattern-1.png);
   background-size: contain;
   background-color: rgba(0, 0, 0, 0.66);
 }

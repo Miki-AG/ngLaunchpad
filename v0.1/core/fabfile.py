@@ -34,10 +34,15 @@ def jscomp():
 def css():
     local("java -jar ~/bin/closure-compiler/closure-stylesheets-20111230.jar local.css -o local.min.css")
 
-def createhtml():
+def build():
     print "rendering..."
-    import layout_settings
-    local_template_render('./ng/app/templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
+
+    local("rm -rf ./build")
+    local("mkdir ./build")
+
+    local("cp -a ./base/. ./build")
+    local("cp -a ./dev/. ./build")
+    local_template_render('./base/ng/app/templates/index.tpl.html', './index.html', layout_settings.load_base_configuration())
 
 
 def startserverlocal():

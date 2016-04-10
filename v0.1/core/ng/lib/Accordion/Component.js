@@ -9,7 +9,7 @@ angular.module('ngMApp')
     };
   })
   .controller('AccordionCtrl', function($scope, $http) {
-    $http.get('/ng/lib/Accordion/data.json').success(function(data) {
+    $http.get('/build/ng/lib/Accordion/data.json').success(function(data) {
       $scope.menuChoice = data;
     });
   })
@@ -20,7 +20,7 @@ angular.module('ngMApp')
         openChoice: '=',
         choice: '='
       },
-      templateUrl: '/ng/lib/Accordion/toggle.tpl.html',
+      templateUrl: '/build/ng/lib/Accordion/toggle.tpl.html',
       link: function($scope, $element) {
         var controller = $element.parent().controller();
 
@@ -75,7 +75,7 @@ angular.module('ngMApp')
         openedSection: '=',
         subchoice: '='
       },
-      templateUrl: '/ng/lib/Accordion/link.tpl.html',
+      templateUrl: '/build/ng/lib/Accordion/link.tpl.html',
       link: function($scope, $element) {
         var controller = $element.parent().controller();
 

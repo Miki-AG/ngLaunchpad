@@ -9,46 +9,46 @@ angular.module('ngMApp', [
     $stateProvider
       .state('pages', {
         abstract: true,
-        templateUrl: '/ng/app/pages/pages-root.tpl.html'
+        templateUrl: '/build/ng/app/pages/pages-root.tpl.html'
       })
       .state('pages.installation', {
         url: '/',
-        templateUrl: '/ng/app/pages/installation.tpl.html',
+        templateUrl: '/build/ng/app/pages/installation.tpl.html',
         controller: 'Page0Controller'
       })
       .state('pages.starting', {
         url: '/gettingstarted',
-        templateUrl: '/ng/app/pages/gettingstarted.tpl.html',
+        templateUrl: '/build/ng/app/pages/gettingstarted.tpl.html',
         controller: 'Page1Controller'
       })
       .state('pages.basic', {
         url: '/layouts/basic',
-        templateUrl: '/ng/app/pages/layouts.basic.tpl.html',
+        templateUrl: '/build/ng/app/pages/layouts.basic.tpl.html',
         controller: 'Page2Controller'
       })
       .state('pages.grid', {
         url: '/layouts/grid',
-        templateUrl: '/ng/app/pages/layouts.grid.tpl.html',
+        templateUrl: '/babuildse/ng/app/pages/layouts.grid.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.predefined', {
         url: '/themes/predefined',
-        templateUrl: '/ng/app/pages/themes.predefined.tpl.html',
+        templateUrl: '/build/ng/app/pages/themes.predefined.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.custom', {
         url: '/themes/custom',
-        templateUrl: '/ng/app/pages/themes.custom.tpl.html',
+        templateUrl: '/build/ng/app/pages/themes.custom.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.about', {
         url: '/about',
-        templateUrl: '/ng/app/pages/about.tpl.html',
+        templateUrl: '/build/ng/app/pages/about.tpl.html',
         controller: 'Page3Controller'
       })
       .state('pages.page_data_example', {
         url: '/my_data',
-        templateUrl: '/ng/app/pages/about.tpl.html',
+        templateUrl: '/build/ng/app/pages/about.tpl.html',
         controller: 'Page3Controller',
         resolve: {
           'ServiceData': function(Service) {
@@ -58,7 +58,7 @@ angular.module('ngMApp', [
       })
       .state('otherwise', {
         url: "*path",
-        templateUrl: "ng/lib/common/not-found.tpl.html"
+        templateUrl: "/build/ng/lib/common/not-found.tpl.html"
       });
   })
   .run(function($rootScope, $state) {
