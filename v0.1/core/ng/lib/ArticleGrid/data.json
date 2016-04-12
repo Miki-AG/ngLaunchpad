@@ -1,28 +1,63 @@
 [{
-  "name": "installation",
-  "state": "pages.installation"
-}, {
-  "name": "getting started",
-  "state": "pages.starting"
-}, {
-  "name": "layout types",
-  "subChoices": [{
-    "name": "basic",
-    "state": "pages.basic"
-  }, {
-    "name": "grid",
-    "state": "pages.grid"
-  }]
-}, {
-  "name": "themes",
-  "subChoices": [{
-    "name": "predefined themes",
-    "state": "pages.predefined"
-  }, {
-    "name": "custom",
-    "state": "pages.custom"
-  }]
-}, {
-  "name": "about",
-  "state": "pages.about"
+  "title": "Amor real",
+  "image": "https://i.ytimg.com/vi/8y0sr9b6iuE/mqdefault.jpg",
+  "desc": "Aunque Bernardo estaba enamorado de Libia Reyes, sabe que no podría casarse con ella, ya que Doña Gabriela, una mujer bastante despóta y muy chapada a la antigua, nunca le daría el divorcio.",
+  "col": 2,
+  "row": 2
+},
+{
+  "title": "Pasion",
+  "image": "https://i.ytimg.com/vi_webp/DUNFyMoy5tA/mqdefault.webp",
+  "desc": "Aunque Bernardo estaba enamorado de Libia Reyes, sabe que no podría casarse con ella, ya que Doña Gabriela, una mujer bastante despóta y muy chapada a la antigua, nunca le daría el divorcio.",
+  "row": 2,
+  "col": 1
+},
+{
+  "title": "Manana es para siempre",
+  "image": "https://i.ytimg.com/vi_webp/AfEo0QZSFaQ/mqdefault.webp",
+  "row": 1,
+  "col": 1
+},
+{
+  "title": "Alborada",
+  "image": "https://i.ytimg.com/vi/334UyOUVutI/mqdefault.jpg",
+  "col": 2
+},
+{
+  "title": "La usurpadora",
+  "image": "https://i.ytimg.com/vi_webp/m7SNYzjJYT0/mqdefault.webp",
+  "background": "yellow",
+  "col": 2,
+  "row": 2
+},
+{
+  "title": "Esmeralda",
+  "image": "https://i.ytimg.com/vi/U-VqLNtNGBA/mqdefault.jpg",
+  "col": 1,
+  "row": 1
+},
+{
+  "title": "Abrazame muy fuerte",
+  "image": "https://i.ytimg.com/vi_webp/Hdw6H5L3R4U/mqdefault.webp",
+  "col": 2
+},
+{
+  "title": "Maria la del barrio",
+  "image": "https://i.ytimg.com/vi/IA5jY9CVwX4/mqdefault.jpg",
+  "col": 2
+},
+{
+  "title": "La hija del mariachi",
+  "image": "https://i.ytimg.com/vi_webp/cOPiF7PN_6o/mqdefault.webp",
+  "col": 2
+},
+{
+  "title": "Pasion de gavilanes",
+  "image": "https://i.ytimg.com/vi_webp/j7thr3uvXCo/mqdefault.webp",
+  "col": 2
+},
+{
+  "title": "Marimar",
+  "image": "https://i.ytimg.com/vi_webp/nYMLgiYOCwI/mqdefault.webp",
+  "col": 2
 }]
