@@ -1,0 +1,28 @@
+[{
+  "name": "installation",
+  "state": "pages.installation"
+}, {
+  "name": "getting started",
+  "state": "pages.starting"
+}, {
+  "name": "layout types",
+  "subChoices": [{
+    "name": "basic",
+    "state": "pages.basic"
+  }, {
+    "name": "grid",
+    "state": "pages.grid"
+  }]
+}, {
+  "name": "themes",
+  "subChoices": [{
+    "name": "predefined themes",
+    "state": "pages.predefined"
+  }, {
+    "name": "custom",
+    "state": "pages.custom"
+  }]
+}, {
+  "name": "about",
+  "state": "pages.about"
+}]

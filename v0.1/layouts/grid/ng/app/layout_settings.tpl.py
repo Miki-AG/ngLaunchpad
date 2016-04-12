@@ -18,6 +18,6 @@ def load_base_configuration():
         'ANGULAR_MATERIAL_VERSION': '1.0.0',
         'ANGULAR_MATERIAL_ICONS_VERSION': '0.5.0',
 
-        'NGM_THEME': 'lime',
+        'NGM_THEME': 'blackbg',
 
     {close_braket}

@@ -83,5 +83,5 @@ angular.module('ngMApp').config(function ($mdThemingProvider) {
        .primaryPalette('customPrimary')
        .accentPalette('customAccent')
        .warnPalette('customWarn')
-       .backgroundPalette('customBackground')
+       .backgroundPalette('customBackground');
 });
