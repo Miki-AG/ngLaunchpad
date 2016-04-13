@@ -3,7 +3,7 @@
     md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
 
     <md-grid-tile ng-repeat="tile in tiles" md-rowspan="{{tile.row}}" md-colspan="{{tile.col}}"
-      md-colspan-sm="1" ng-class="tile.background">
+      md-colspan-sm="1" ng-class="tile.background" ng-click="showAdvanced($event)">
       <md-card layout-fill>
         <img ng-src="{{ tile.image }}" class="md-card-image" alt="Washed Out">
         <md-card-title class="card-title">

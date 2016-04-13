@@ -1,0 +1,31 @@
+<md-dialog aria-label="Mango (Fruit)" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Mango (Fruit)</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+          <ng-md-icon icon="close" style="fill:#ffffff"></ng-md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <video id="currVideo" autoplay="none" preload="none" controls="" tabindex="0">
+      <source type="video/mp4" ng-src="http://corrupt-system.de/assets/media/sintel/sintel-trailer.m4v"></source>
+      <source type="video/webm" ng-src="http://corrupt-system.de/assets/media/sintel/sintel-trailer.webm"></source>
+    </video>
+    <md-content class="md-padding">
+      <md-dialog-actions layout="row">
+        <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+          More
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="answer('not useful')">
+          Like
+        </md-button>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Useful
+        </md-button>
+      </md-dialog-actions>
+    </md-content>
+  </form>
+</md-dialog>
