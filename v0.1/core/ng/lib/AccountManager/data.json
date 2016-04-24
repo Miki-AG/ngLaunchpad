@@ -1,10 +1,10 @@
 [{
   "name": "Account",
   "subChoices": [{
-    "name": "A",
+    "name": "Profile",
     "state": "pages.predefined"
   }, {
-    "name": "B",
+    "name": "Change password",
     "state": "pages.custom"
   }]
 }]

@@ -2,7 +2,8 @@ angular.module('ngMApp', [
     'angular-loading-bar', 'ngAnimate', 'ui.router', 'ui.router.stateHelper',
     'ngMaterial', 'ngMdIcons', 'ngSanitize'
   ])
-  .config(function($stateProvider, $urlRouterProvider, stateHelperProvider, cfpLoadingBarProvider) {
+  .config(function($stateProvider, $urlRouterProvider,
+    stateHelperProvider, cfpLoadingBarProvider) {
 
     cfpLoadingBarProvider.includeSpinner = false;
 
@@ -11,7 +12,7 @@ angular.module('ngMApp', [
         abstract: true,
         templateUrl: '/build/ng/app/pages/pages-root.tpl.html'
       })
-      .state('pages.installation', {
+      .state('pages.home', {
         url: '/',
         templateUrl: '/build/ng/app/pages/installation.tpl.html',
         controller: 'Page0Controller'
@@ -21,10 +22,12 @@ angular.module('ngMApp', [
         templateUrl: '/build/ng/app/pages/gettingstarted.tpl.html',
         controller: 'Page1Controller'
       })
+      // State that requires login
       .state('pages.basic', {
         url: '/layouts/basic',
         templateUrl: '/build/ng/app/pages/layouts.basic.tpl.html',
-        controller: 'Page2Controller'
+        controller: 'Page2Controller',
+        roles: ['User']
       })
       .state('pages.grid', {
         url: '/layouts/grid',
@@ -61,17 +64,25 @@ angular.module('ngMApp', [
         templateUrl: "/build/ng/lib/common/not-found.tpl.html"
       });
   })
-  .run(function($rootScope, $state) {
+  .run(function($rootScope, $state, Auth) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
-      // TODO: implement the code to access here
-      //var requireLogin = toState.data.requireLogin;
-      //console.log(toState);
 
-      /*
-      if (toState.name != 'pages.page3') {
-        $state.go('pages.page3');
-      }*/
+      console.log(toState);
+
+      if (toState.roles &&
+        toState.roles.length > 0 &&
+        !Auth.isInAnyRole(toState.roles)) {
+
+        if (Auth.isAuthenticated()) {
+          $state.transitionTo("pages.accessdenied");
+          event.preventDefault();
+        } // user is signed in but not authorized for desired state
+        else {
+          // now, send them to the signin state so they can log in
+          $state.go('pages.signin');
+        }
+      }
 
     });
 

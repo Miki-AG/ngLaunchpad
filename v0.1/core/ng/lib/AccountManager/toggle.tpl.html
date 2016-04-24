@@ -21,6 +21,12 @@
 </md-button>
 <ul ng-show="isOpen()" id="docs-menu-{{choice.name}}" class="menu-toggle-list">
   <li ng-repeat="subchoice in choice.subChoices">
-    <menu-link subchoice="subchoice"></menu-link>
+    <menu-link-am subchoice="subchoice"></menu-link-am>
+  </li>
+  <li>
+    <md-button ng-click="logout()" class="menu-option">
+      Logoff
+      <span class="md-visually-hidden" ng-if="isSelected()">Logoff</span>
+    </md-button>
   </li>
 </ul>

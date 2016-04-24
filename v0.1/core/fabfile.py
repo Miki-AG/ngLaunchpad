@@ -55,18 +55,16 @@ def startserverlocal():
 
 
 def startserverlocalcomp():
-    local("rm -rf %s/%s" % ('.', 'temp'))
-    local("mkdir %s/%s" % ('.', 'temp'))
     local("rm -rf %s/%s" % ('.', 'build'))
     local("mkdir %s/%s" % ('.', 'build'))
 
     print "Annotating JS..."
-    local("ng-annotate -a ./bin/ng/FwApp.js > ./temp/ng/FwApp-Annotated.js")
-    local("ng-annotate -a ./work/ng/WorkApp.js > ./temp/ng/WorkApp-Annotated.js")
+    local("ng-annotate -a ./bin/ng/FwApp.js > ./build/ng/FwApp-Annotated.js")
+    local("ng-annotate -a ./work/ng/WorkApp.js > ./build/ng/WorkApp-Annotated.js")
 
     print "Compiling fw JS..."
-    local("java -jar ~/bin/closure-compiler/compiler.jar ./temp/ng/FwApp-Annotated.js > ./build/ng/FwApp-Compiled.js")
-    local("java -jar ~/bin/closure-compiler/compiler.jar ./temp/ng/WorkApp-Annotated.js > ./build/ng/WorkApp-Compiled.js")
+    local("java -jar ~/bin/closure-compiler/compiler.jar ./build/ng/FwApp-Annotated.js > ./build/ng/FwApp-Compiled.js")
+    local("java -jar ~/bin/closure-compiler/compiler.jar ./build/ng/WorkApp-Annotated.js > ./build/ng/WorkApp-Compiled.js")
 
     print "Compiling CSS..."
     local("java -jar ~/bin/closure-compiler/closure-stylesheets-20111230.jar ./bin/css/local.css -o ./build/css/local.min.css")

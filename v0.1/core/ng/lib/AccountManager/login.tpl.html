@@ -1,0 +1,60 @@
+<md-dialog>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{show_form}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Close dialog" ng-click="cancel()">
+        <ng-md-icon icon="close" style="fill:#ffffff"></ng-md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content layout-padding>
+    <div ng-if="show_form == 'Login'">
+      <form name="loginForm" ng-submit="loginForm.$valid && login()" novalidate>
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input type="email" name="email" required ng-model="user.email">
+          <div ng-messages="loginForm.email.$error" ng-if="loginForm.email.$dirty">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input type="password" name="password" required ng-model="user.password">
+          <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-button ng-click="login()" class="md-raised md-primary">Login</md-button>
+        <md-button ng-click="switchToRegister()" class="md-primary">Register</md-button>
+      </form>
+    </div>
+    <div ng-if="show_form == 'Register'">
+      <form name="registerForm" ng-submit="registerForm.$valid && register()" novalidate>
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input type="email" name="email" required ng-model="user.email">
+          <div ng-messages="loginForm.email.$error" ng-if="loginForm.email.$dirty">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input type="password" name="password" required ng-model="user.password">
+          <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password Confirm</label>
+          <input type="password" name="password_confirm" required ng-model="user.password_confirm">
+          <div ng-messages="loginForm.password_confirm.$error" ng-if="loginForm.password_confirm.$dirty">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-button ng-click="register()" class="md-raised md-primary">Register</md-button>
+        <md-button ng-click="switchToLogin()" class="md-primary">Login</md-button>
+      </form>
+    </div>
+  </md-dialog-content>
+</md-dialog>
