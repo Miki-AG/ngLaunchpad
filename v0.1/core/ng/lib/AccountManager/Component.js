@@ -7,26 +7,18 @@ angular.module('ngMApp')
   .controller('AccountManagerCtrl', function($scope, $http, $mdDialog, $mdMedia, Auth) {
 
     $scope.$watch(Auth.isLoggedIn, function(value, oldValue) {
-      if (!value && oldValue) {
-        console.log("Disconnect");
-        $scope.logged = false;
-      }
       if (value) {
-        console.log("Connect");
-        //Do something when the user is connected
-        $scope.user = value;
-        $scope.logged = true;
         $scope.cancel();
       }
+      $scope.user = value;
     }, true);
 
     $http.get('/build/ng/lib/AccountManager/data.json').success(function(data) {
       $scope.menuChoice = data;
     });
 
-    $scope.logged = false;
     $scope.show_form = 'Login';
-    $scope.user = {};
+    $scope.user = Auth.retrieveUser();
 
     $scope.login = function() {
       var user = {
@@ -169,8 +161,20 @@ angular.module('ngMApp')
     var user;
 
     return {
+      retrieveUser: function() {
+        var userObj = localStorage.getItem("ngLaunchpad.user")
+        if (userObj) {
+          this.setUser(angular.fromJson(userObj));
+        };
+        return this.isLoggedIn();
+      },
       setUser: function(newUser) {
         user = newUser;
+        if (user) {
+          localStorage.setItem("ngLaunchpad.user", angular.toJson(user));
+        } else {
+          localStorage.removeItem("ngLaunchpad.user");
+        }
       },
       isLoggedIn: function() {
         return (user) ? user : false;

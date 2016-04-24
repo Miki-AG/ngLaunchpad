@@ -1,12 +1,12 @@
 <div layout="column" class="pattern-bg" ng-controller="AccountManagerCtrl">
-  <md-content ng-if="logged" layout="column" layout-align="center center" class="transparent-bg">
+  <md-content ng-if="user" layout="column" layout-align="center center" class="transparent-bg">
     <img ng-src="https://s3.amazonaws.com/ugedev1/a/miargar.jpg" class="md-round-avatar-106"
     />
   </md-content>
-  <div ng-if="!logged" layout="column" layout-align="center center">
+  <div ng-if="!user" layout="column" layout-align="center center">
     <ng-md-icon size="128px" icon="account_circle" style="fill:gray"></ng-md-icon>
   </div>
-  <md-content ng-if="!logged" class="md-padding">
+  <md-content ng-if="!user" class="md-padding">
     <div layout="row">
       <md-button ng-click="showLogin()" md-autofocus>
         Login
@@ -17,7 +17,10 @@
       </md-button>
     </div>
   </md-content>
-  <ul ng-if="logged" class="account-manager">
+  <md-button ng-if="user" class="md-primary md-hue-1">
+    Welcome {{user.username}}
+  </md-button>
+  <ul ng-if="user" class="account-manager">
     <li ng-repeat="choice in menuChoice" class="parent-list-item">
       <menu-toggle-am choice="choice"></menu-toggle-am>
     </li>
