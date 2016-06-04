@@ -15,6 +15,8 @@ def startproject(project_name, project_path, site_type="basic", ngm_version="v0.
     fab
     project_name: project_name of the project.
     path: path to the project.
+
+    example: fab startproject:viewpoint,../ngMprojects,grid
     """
     local("rm -rf %s/%s" % (project_path, project_name))
     local("mkdir %s/%s" % (project_path, project_name))

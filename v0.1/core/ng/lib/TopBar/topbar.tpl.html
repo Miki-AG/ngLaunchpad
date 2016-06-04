@@ -10,11 +10,11 @@
     </md-button>
 
     <md-button aria-label="Logo" class="logo-container">
-      <img class="logo" src="/build/ng/app/img/topbar_logo.png"></md-icon>
+      <img class="logo" ng-src="{{config.logo_url}}"></md-icon>
     </md-button>
 
     <h2>
-      <span>{{companyName}}</span>
+      <span>{{config.company}}</span>
     </h2>
     <span flex=""></span>
 

@@ -62,6 +62,10 @@ angular.module('ngMApp')
           $scope.visibleMenus = data;
       });
 
+      $http.get('/build/ng/lib/common/config.json').success(function (data){
+          $scope.config = data;
+      });
+
       $scope.doActionMenu = function(event, idOfMenuToToggle, action) {
         console.log(idOfMenuToToggle);
         console.log(action);
