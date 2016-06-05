@@ -20,12 +20,10 @@ def startproject(project_name, project_path, site_type="basic", ngm_version="v0.
     """
     local("rm -rf %s/%s" % (project_path, project_name))
     local("mkdir %s/%s" % (project_path, project_name))
-    local("mkdir %s/%s/base" % (project_path, project_name))
-    local("mkdir %s/%s/base/ng" % (project_path, project_name))
-
-    clone_files(ngm_version, site_type, project_path, project_name)
-    create_properties(ngm_version, site_type, project_path, project_name)
     local("mkdir %s/%s/dev" % (project_path, project_name))
+
+    updatebase(project_name, project_path, site_type, ngm_version)
+
 
 
 def updateproject(project_name, project_path, site_type="basic", ngm_version="v0.1"):
@@ -36,8 +34,14 @@ def updateproject(project_name, project_path, site_type="basic", ngm_version="v0
     path: path to the project.
     """
     local("rm -rf %s/%s/base" % (project_path, project_name))
+
+    updatebase(project_name, project_path, site_type, ngm_version)
+
+
+def updatebase(project_name, project_path, site_type="basic", ngm_version="v0.1"):
     local("mkdir %s/%s/base" % (project_path, project_name))
     local("mkdir %s/%s/base/ng" % (project_path, project_name))
+    local("mkdir %s/%s/base/py" % (project_path, project_name))
     clone_files(ngm_version, site_type, project_path, project_name)
     create_properties(ngm_version, site_type, project_path, project_name)
 
@@ -63,7 +67,19 @@ def clone_files(ngm_version, site_type, project_path, project_name):
     local("cp -a ./%s/core/ng/. %s/%s/base/ng" %
           (ngm_version, project_path, project_name))
 
+    local("cp -a ./%s/core/py/. %s/%s/base/py" %
+          (ngm_version, project_path, project_name))
+
     local("cp -a ./%s/core/fabfile.py %s/%s" %
+          (ngm_version, project_path, project_name))
+
+    local("cp -a ./%s/core/main.py %s/%s/base" %
+          (ngm_version, project_path, project_name))
+
+    local("cp -a ./%s/core/app.yaml %s/%s/base" %
+          (ngm_version, project_path, project_name))
+
+    local("cp -a ./%s/core/index.html %s/%s/base" %
           (ngm_version, project_path, project_name))
 
     local("cp -a ./%s/layouts/%s/. %s/%s/base" %

@@ -44,7 +44,7 @@ def build():
     local("cp -a ./base/. ./build")
     local("cp -a ./dev/. ./build")
     local_template_render('./base/ng/app/templates/index.tpl.html',
-        './index.html', layout_settings.load_base_configuration())
+        './build/index.html', layout_settings.load_base_configuration())
 
 
 def startserverlocal():
