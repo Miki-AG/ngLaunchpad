@@ -1,5 +1,9 @@
 <md-button ng-class="{'active' : isSelected()}" ng-click="focusSection()" class="menu-option">
+
+  <ng-md-icon ng-if='subchoice.icon' class="ng-md-icon-centered md-padding icon-fix" icon="{{subchoice.icon}}"  style="fill: {{subchoice.icon_color}}"></ng-md-icon>
+
   {{subchoice.name}}
+
   <span class="md-visually-hidden" ng-if="isSelected()">
 		current page
 	</span>

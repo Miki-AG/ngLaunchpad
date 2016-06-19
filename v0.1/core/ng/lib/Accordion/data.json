@@ -1,28 +1,32 @@
 [{
-  "name": "installation",
-  "state": "pages.installation"
+    "name": "installation",
+    "state": "pages.installation",
+    "icon": "video_collection",
+    "icon_color": "blue"
 }, {
-  "name": "getting started",
-  "state": "pages.starting"
+    "name": "getting started",
+    "state": "pages.starting"
 }, {
-  "name": "layout types",
-  "subChoices": [{
-    "name": "basic",
-    "state": "pages.basic"
-  }, {
-    "name": "grid",
-    "state": "pages.grid"
-  }]
+    "name": "layout types",
+    "subChoices": [{
+        "name": "basic",
+        "state": "pages.basic",
+        "icon": "favorite",
+        "icon_color": "red"
+    }, {
+        "name": "grid",
+        "state": "pages.grid"
+    }]
 }, {
-  "name": "themes",
-  "subChoices": [{
-    "name": "predefined themes",
-    "state": "pages.predefined"
-  }, {
-    "name": "custom",
-    "state": "pages.custom"
-  }]
+    "name": "themes",
+    "subChoices": [{
+        "name": "predefined themes",
+        "state": "pages.predefined"
+    }, {
+        "name": "custom",
+        "state": "pages.custom"
+    }]
 }, {
-  "name": "about",
-  "state": "pages.about"
+    "name": "about",
+    "state": "pages.about"
 }]

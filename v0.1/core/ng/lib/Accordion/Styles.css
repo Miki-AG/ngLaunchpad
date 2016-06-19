@@ -1,102 +1,111 @@
 .accordion {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .accordion,
 .accordion ul {
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
 .accordion li {
-  margin: 0;
+    margin: 0;
 }
 
 .accordion > li {
-  border-top: 1px solid rgba(0, 0, 0, .12);
+    border-top: 1px solid rgba(0, 0, 0, .12);
 }
 
 .accordion .md-button {
-  line-height: 40px;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  max-height: 40px;
-  margin: 0;
-  padding: 0 16px;
-  cursor: pointer;
-  text-align: left;
-  white-space: normal;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 0;
+    line-height: 40px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-height: 40px;
+    margin: 0;
+    padding: 0 16px;
+    cursor: pointer;
+    text-align: left;
+    white-space: normal;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 0;
 }
 
 .accordion button.md-button::-moz-focus-inner {
-  padding: 0;
+    padding: 0;
 }
 
 .accordion .md-button.active {
-  /*color: #03a9f4;*/
-  color: rgba(211, 87, 23, 1);
+    /*color: #03a9f4;*/
+    color: rgba(211, 87, 23, 1);
 }
 
 .menu-heading {
-  line-height: 40px;
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0 16px;
-  text-align: left;
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    text-align: left;
 }
 
 .accordion li.parentActive,
 .accordion li.parentActive .menu-toggle-list {
-  background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 .menu-toggle-list {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  max-height: 1300px;
-  -webkit-transition: .75s cubic-bezier(.35, 0, .25, 1);
-  -moz-transition: .75s cubic-bezier(.35, 0, .25, 1);
-  transition: .75s cubic-bezier(.35, 0, .25, 1);
-  -webkit-transition-property: max-height;
-  -moz-transition-property: max-height;
-  transition-property: max-height;
-  background: rgba(255, 255, 255, .1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    max-height: 1300px;
+    -webkit-transition: .75s cubic-bezier(.35, 0, .25, 1);
+    -moz-transition: .75s cubic-bezier(.35, 0, .25, 1);
+    transition: .75s cubic-bezier(.35, 0, .25, 1);
+    -webkit-transition-property: max-height;
+    -moz-transition-property: max-height;
+    transition-property: max-height;
+    background: rgba(255, 255, 255, .1);
 }
 
 .menu-toggle-list.ng-hide {
-  max-height: 0;
+    max-height: 0;
 }
 
 .accordion .menu-toggle-list a.md-button {
-  font-weight: 400;
-  display: block;
-  padding: 0 16px 0 32px;
-  text-transform: none;
+    font-weight: 400;
+    display: block;
+    padding: 0 16px 0 32px;
+    text-transform: none;
 }
 
 .simple-text {
-  text-transform: none;
+    text-transform: none;
 }
 
 .md-button-toggle .md-toggle-icon {
-  display: block;
-  margin-left: auto;
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  vertical-align: middle;
-  speak: none;
+    display: block;
+    margin-left: auto;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    vertical-align: middle;
+    speak: none;
 }
 
 .md-button-toggle .md-toggle-icon.toggled {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.menu-option {
+    margin-left: 16px!important;
+}
+
+.icon-fix {
+  padding-left: 0!important;
+  padding-right: 8px!important;
 }
